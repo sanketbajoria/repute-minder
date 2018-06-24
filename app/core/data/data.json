@@ -1,0 +1,14 @@
+[ {
+  "name": "Shipping",
+  "description": "Send packages of any size all over the world",
+  "image": "modules/home/assets/images/pb_brand_icons_shipping.svg"
+}, {
+  "name": "Save Money",
+  "description": "Track your expenses.",
+  "image": "modules/home/assets/images/pb_brand_icons_money.svg"
+}, {
+  "name": "Mailing",
+  "description": "Print stamps without going to the Post Office.",
+  "image": "modules/home/assets/images/pb_brand_icons_mail.svg"
+}
+]

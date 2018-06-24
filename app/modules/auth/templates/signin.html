@@ -1,0 +1,77 @@
+<div class="site-page-wrapper">
+    <div>
+        <!---->
+        <main class="site-main site-main-noleftnav" ng-class="{'site-main-noleftnav': !app.showLeftNav}">
+            <!---->
+            <!---->
+            <header ng-if="!app.showLeftNav" ui-view="header" pbds-header-shadow="" class=""></header>
+            <!---->
+            <!---->
+            <div class="site-content" ui-view="content">
+                <div class="floating-unit">
+
+                    <a class="signin-pb-logo" href="http://www.pb.com"></a>
+
+                    <!-- begin white box -->
+                    <div class="signin-box">
+                        <h1 class="signin-heading">Repute Minder
+                            <sup>™</sup>
+                        </h1>
+
+
+                        <form autocomplete="off" name="myForm" class="spacer-top-md"
+                            novalidate="" style="">
+                            <div class="form-group" ng-class="{'has-error': (myForm.name.$error.required || myForm.name.$error.email)  && myForm.name.$dirty}">
+                                <label for="name">
+                                    <span translate="EMAIL_LABEL">Email</span>
+                                </label>
+                                <input class="form-control" name="name" required="" type="email" ng-model="signin.data.email">
+                                <span class="help-block" ng-show="(myForm.name.$error.required || myForm.name.$error.email) && myForm.name.$dirty">
+                                    <span translate="INVALID_EMAIL">Enter a valid email address.</span>
+                                </span>
+                            </div>
+                            <div class="form-group" ng-class="{'has-error': (myForm.password.$error.required || signin.invalidPassword) && myForm.password.$dirty}">
+                                <label for="password">
+                                    <span translate="PASSWORD_LABEL">Password</span>
+                                </label>
+                                <pbds-password-reveal link-show="Show" link-hide="Hide">
+                                    <span class="password-reveal">
+                                        
+                                            <input class="form-control" name="password" ng-model="signin.data.password"
+                                                required="" type="password">
+                                        
+                                    </span>
+                                </pbds-password-reveal>
+                                <span class="help-block" ng-show="myForm.password.$dirty && signin.invalidPassword">
+                                    <span translate="INVALID_PASSWORD">We don't recognize that email and password combination.</span>
+                                </span>
+                            </div>
+
+                            <label class="control checkbox">
+                                <input type="checkbox">
+                                <span class="control-indicator"></span>
+                                <span translate="REMEMBER_ME_CB">Remember me</span>
+                            </label>
+
+                            <button class="btn btn-primary btn-block btn-lg spacer-top-xs" ng-click="signin.login()" type="submit">
+                                <span translate="SIGN_IN_BUTTON">Sign In</span>
+                            </button>
+                        </form>
+
+
+                        <p class="text-center">
+                            <span translate="NOT_REGISTERED_LINK">Not a registered user?</span>
+                            <a ng-click="signin.gotoSignup(myForm.$valid)">
+                                <span translate="SIGN_UP_LINK">Sign up now</span>
+                            </a>
+                        </p>
+                    </div>
+                    <!-- // end white box -->
+                </div>
+
+
+
+            </div>
+        </main>
+    </div>
+</div>

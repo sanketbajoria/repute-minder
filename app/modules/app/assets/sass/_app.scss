@@ -1,0 +1,107 @@
+// place scss for styling this module here
+// this file is imported into /app/assets/sass/app.scss
+
+.secondary-menu-1 {
+    padding: 0px 20px 22px 20px;
+}
+.breadcrumb {
+        margin: 18px 0 !important;
+        li {
+            font-size: 18px;
+            font-weight: bold;
+            a {
+                text-decoration: none;
+            }
+        }
+}
+
+
+
+
+.detail-section {
+    margin-top: 50px;
+    h3 {
+        font-size: 18px;
+    }
+}
+
+.info {
+    padding-right: 15px;
+    h3 {
+        color: rgb(160, 160, 160);
+        font-size: 13px;
+      
+    }
+    p {
+        font-size: 12px; 
+        word-wrap: break-word;
+    }
+}
+
+p {
+    color: black;
+    // font-size: 16px;
+}
+
+.label {
+    padding: .3em 0.2em .3em;
+    font-size: 17px;
+}
+
+p.rating-value {
+    font-size: 60px;
+}
+
+.star {
+    color: #737373;
+    font-size: 14px;
+}
+
+.star-label {
+    float: left;
+    margin-right: 5px;
+    margin-top: 2px;
+}
+
+.rating-progress {
+    background-color: #ffffff;
+    border-radius: 0;
+    box-shadow: none !important;
+}
+
+.star-5 {
+    background-color: rgb(166, 191, 108);
+}
+
+.star-4 {
+    background-color: rgb(182, 211, 101);
+}
+
+.star-3 {
+    background-color: rgb(251, 217, 109);
+}
+
+.star-2 {
+    background-color: rgb(286, 181, 99);
+}
+
+.star-1 {
+    background-color: rgb(242, 146, 104);
+}
+
+.progress {
+    height: 25px !important;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+}
+
+.progress-bar {
+    line-height: 24px !important;
+    color: #000;
+    text-align: left;
+    padding-left: 5px;
+}
+
+.sr-only {
+    position: inherit !important;
+}

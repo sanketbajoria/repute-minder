@@ -1,0 +1,249 @@
+// import from DS bower component so you can use variables and mixins in your SCSS
+@import '../../bower_components/pb-design-system/sass/settings/variables';
+@import '../../bower_components/pb-design-system/sass/settings/mixins';
+// for example
+// .something {
+//   color: $pb-blue-500;
+// }
+
+// import scss partials from modules folder here
+@import '../../modules/app/assets/sass/app';
+
+header i.nc-icon-outline {
+  font-size: 20px;
+}
+
+.leftnav .section-group:not(:first-child) {
+  border-top: solid 1px #c0c0c0;
+  margin-top: 10px;
+  padding-top: 15px;
+}
+
+.leftnav {
+  border-right: solid 1px #c0c0c0;
+  background-color: #f8f8f8;
+  padding-top: 10px;
+  min-height: 100%;
+}
+
+.two-col-wrapper {
+  min-height: calc(100vh - 75px);
+  height: calc(100vh - 75px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  overflow: hidden;
+}
+
+.main-content{
+  padding: 0px;
+  overflow: auto;
+}
+
+.secondary-menu{
+  padding: 18px 20px 22px 20px;
+  background-color: #f8f8f8;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.search-box{
+  position: relative;
+  span{
+    position: absolute;
+    top: 15px;
+    font-size: 10px;
+    left: 12px;
+    color: gray;
+  }
+  input{
+    padding-left: 32px;
+  }
+}
+
+.site-content{
+  margin-bottom: 0px;
+}
+
+.app-content{
+  padding-left: 20px;
+  padding-right: 20px;
+  height: calc(100vh - 150px);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+
+
+/*
+.app.panel.category-widget{
+  box-shadow: 0 3px 7px rgba(0,0,0,0.07);
+  img{
+    max-height: 48px;
+    max-width: 48px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .panel-footer{
+    height: 96px;
+    max-height: 96px;
+    min-height: 96px;
+    position: relative;
+  }
+  .panel-body{
+    padding: 10px;
+  }
+  .category-widget-title{
+    font-size: 14px;
+    font-weight: bold;
+    min-height: 40px;
+    margin-bottom: 5px;
+  }
+
+  .category-widget-description{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: horizontal;
+    line-height: 16px;
+    max-height: 64px;
+    min-height: 64px;
+    font-size: 11px;
+    
+  }
+  .category-widget-action{ 
+    margin-top: 6px;
+    .badge{
+      font-size: 9px;
+    }
+    .badge:first-child{
+      float: left;
+    }
+    .badge:last-child{
+      float: right;
+      cursor: pointer;
+    }
+  }
+
+  &:hover{
+    background-color: #fff;
+    .panel-footer{
+      background-position: 200% 0;
+    }
+  }
+}*/
+
+ .app.card.category-widget{
+  box-shadow: 0 3px 7px rgba(0,0,0,0.07);
+  img{
+    max-height: 72px;
+    max-width: 132px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .card-footer{
+    height: 96px;
+    max-height: 96px;
+    min-height: 96px;
+    position: relative;
+  }
+  .card-body{
+    padding: 10px;
+  }
+  .category-widget-title{
+    font-size: 14px;
+    font-weight: bold;
+    min-height: 40px;
+    margin-bottom: 5px;
+  }
+
+  .category-widget-description{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: horizontal;
+    line-height: 16px;
+    max-height: 64px;
+    font-size: 11px;
+    
+  }
+  .category-widget-action{ 
+    margin-top: 6px;
+    .badge{
+      font-size: 9px;
+    }
+    .badge:first-child{
+      float: left;
+    }
+    .badge:last-child{
+      float: right;
+      cursor: pointer;
+    }
+  }
+
+  &:hover{
+    background-color: #fff;
+    .card-footer{
+      background-position: 200% 0;
+    }
+  }
+} 
+
+.app-content .row .col-sm-2{
+  padding-left: 15px;
+  padding-right: 0px;
+}
+
+/* .app-content .row .col-sm-2{
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+*{
+  outline-color: transparent;
+} */
+
+
+.category-label {
+  font-size: 16px;
+  margin-top: 10px;
+}
+.category-description {
+  color: #c0c0c0;
+  font-size: 12px;
+  margin-bottom: 16px;
+}
+
+.m-t-0 {
+  margin-top: 0 !important;
+}
+
+.m-b-0 {
+  margin-bottom: 0 !important;
+}
+
+.m-t-3 {
+  margin-top: 30px;
+}
+.m-t-5 {
+  margin-top: 3px;
+}
+
+.m-p-0 {
+  padding: 0 !important;
+}
+
+#fbplus-wrap { box-sizing: content-box; } #fbplus-content { box-sizing: content-box; }

@@ -1,0 +1,84 @@
+<div class="site-content" ui-view="content">
+    <div class="floating-unit">
+        <a class="signin-pb-logo" href="http://www.pb.com"></a>
+
+        <!-- white box -->
+        <div class="signin-box">
+            <h2 class="text-magenta spacer-top-xs">
+                <span>Welcome
+                </span>
+            </h2>
+            <form autocomplete="off" name="myForm" class="spacer-top-md" novalidate="" style="">
+                <div class="form-group" ng-class="{'has-error': myForm.name.$error.required  && myForm.name.$dirty}">
+                    <label for="name">
+                        <span>Name</span>
+                    </label>
+                    <input class="form-control" name="name" required="" type="text" ng-model="signup.data.name">
+                    <span class="help-block" ng-show="myForm.name.$error.required && myForm.name.$dirty">
+                        <span>Enter a name.</span>
+                    </span>
+                </div>
+                <div class="form-group" ng-class="{'has-error': (myForm.email.$error.required || myForm.email.$error.email || signup.duplicateEmail) && myForm.email.$dirty}">
+                    <label for="name">
+                        <span>Email</span>
+                    </label>
+                    <input class="form-control" name="email" required="" type="email" ng-model="signup.data.email">
+                    <span class="help-block" ng-show="(myForm.email.$error.required || myForm.email.$error.email) && myForm.email.$dirty">
+                        <span>Enter a valid email address.</span>
+                    </span>
+                    <span class="help-block" ng-show="myForm.email.$dirty && signup.duplicateEmail">
+                            <span>Email Id already registered</span>
+                        </span>
+                </div>
+                <div class="form-group spacer-bottom-sm">
+                    <label for="name">
+                        <span translate="PASSWORD_LABEL">Password</span>
+                    </label>
+                    <pbds-password-reveal link-show="Show" link-hide="Hide">
+                        <span class="password-reveal">
+                            <div class="form-group" ng-class="{'has-error': myForm.password.$error.required  && myForm.password.$dirty}">
+                                <input class="form-control" name="password" type="password" ng-init="signup.focus = false" ng-focus="signup.focus = !signup.focus"
+                                    ng-blur="signup.focus = !signup.focus" ng-model="signup.data.password" required>
+                                <span class="help-block" ng-show="myForm.password.$error.required && myForm.password.$dirty">
+                                    <span translate="INVALID_EMAIL">Enter a password.</span>
+                                </span>
+                            </div>
+                        </span>
+                    </pbds-password-reveal>
+                </div>
+                <div class="form-group spacer-bottom-sm">
+                    <label for="name">
+                        <span translate="CONFIRM_PASSWORD_LABEL">Confirm password</span>
+                    </label>
+                    <pbds-password-reveal link-show="Show" link-hide="Hide">
+                        <span class="password-reveal">
+                            <div class="form-group" ng-class="{'has-error': (myForm.confirmPassword.$error.required || (signup.data.password != signup.data.confirmPassword)) && myForm.confirmPassword.$dirty}">
+
+                                <input class="form-control" name="confirmPassword" type="password" ng-init="signup.focus = false" ng-focus="signup.focus = !signup.focus"
+                                    ng-blur="signup.focus = !signup.focus" ng-model="signup.data.confirmPassword">
+                                <span class="help-block" ng-show="myForm.confirmPassword.$error.required && myForm.confirmPassword.$dirty">
+                                    <span translate="INVALID_EMAIL">Enter a password.</span>
+                                </span>
+                                <span class="help-block" ng-show="myForm.confirmPassword.$dirty && (signup.data.password != signup.data.confirmPassword)">
+                                    <span translate="INVALID_EMAIL">Passwords don't match.</span>
+                                </span>
+                            </div>
+                        </span>
+                    </pbds-password-reveal>
+                </div>
+
+
+                <button ng-disabled="myForm.$invalid || (signup.data.password != signup.data.confirmPassword)" class="btn btn-primary btn-block btn-lg" ng-click="signup.signup()" type="submit">
+                    <span translate="COMPLETE_MY_REGISTRATION">Complete My Registration</span>
+                </button>
+            </form>
+            <p class="spacer-top-md">
+                <span translate="AGREE_TO_TERMS">By clicking "Complete My Registration" you agree to our
+                    <a href="">terms of use</a>,
+                    <a href="">privacy</a> and
+                    <a href="">refund policies</a>.</span>
+            </p>
+        </div>
+        <!-- // end white box -->
+    </div>
+</div>
